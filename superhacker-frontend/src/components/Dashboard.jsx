@@ -50,8 +50,8 @@ export function Dashboard() {
         
         // Fetch stats and overview data
         const [statsResponse, overviewResponse] = await Promise.all([
-          fetch('http://localhost:5000/api/system/stats'),
-          fetch('http://localhost:5000/api/dashboard/overview')
+          fetch('http://213.210.37.171:5001/api/system/stats'),
+          fetch('http://213.210.37.171:5001/api/dashboard/overview')
         ])
 
         if (!statsResponse.ok || !overviewResponse.ok) {
