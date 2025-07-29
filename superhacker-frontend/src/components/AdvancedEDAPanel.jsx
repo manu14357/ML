@@ -560,7 +560,7 @@ export function AdvancedEDAPanel({ edaData, loading, dataset, onClose, onRefresh
   const fetchDatasetById = async (datasetId) => {
     try {
       console.log('🚑 Fetching dataset by ID:', datasetId)
-      const response = await fetch(`http://localhost:5000/api/data/datasets/${datasetId}`)
+      const response = await fetch(`http://213.210.37.171:5001/api/data/datasets/${datasetId}`)
       
       if (response.ok) {
         const data = await response.json()
@@ -1794,8 +1794,8 @@ function InsightsSection({ edaData, dataset, getActiveDataset, fetchDatasetById,
         throw new Error('Dataset became unavailable during request')
       }
       
-      console.log('🚀 Making AI insights request to:', `http://localhost:5000/api/ai/datasets/${datasetId}/ai-insights`)
-      const response = await fetch(`http://localhost:5000/api/ai/datasets/${datasetId}/ai-insights`, {
+      console.log('🚀 Making AI insights request to:', `http://213.210.37.171:5001/api/ai/datasets/${datasetId}/ai-insights`)
+      const response = await fetch(`http://213.210.37.171:5001/api/ai/datasets/${datasetId}/ai-insights`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1866,8 +1866,8 @@ function InsightsSection({ edaData, dataset, getActiveDataset, fetchDatasetById,
         throw new Error('Dataset became unavailable during request')
       }
       
-      console.log('🚀 Making advanced analysis request to:', `http://localhost:5000/api/ai/datasets/${datasetId}/advanced-analysis`)
-      const response = await fetch(`http://localhost:5000/api/ai/datasets/${datasetId}/advanced-analysis`, {
+      console.log('🚀 Making advanced analysis request to:', `http://213.210.37.171:5001/api/ai/datasets/${datasetId}/advanced-analysis`)
+      const response = await fetch(`http://213.210.37.171:5001/api/ai/datasets/${datasetId}/advanced-analysis`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -2518,7 +2518,7 @@ function DebugSection({ edaData, dataset }) {
                 onClick={async () => {
                   try {
                     console.log('🧪 Testing backend connection...')
-                    const response = await fetch('http://localhost:5000/api/data/datasets')
+                    const response = await fetch('http://213.210.37.171:5001/api/data/datasets')
                     console.log('📡 Backend test response:', {
                       status: response.status,
                       ok: response.ok,
@@ -2548,7 +2548,7 @@ function DebugSection({ edaData, dataset }) {
                   }
                   try {
                     console.log('🧪 Testing EDA endpoint...')
-                    const response = await fetch(`http://localhost:5000/api/data/datasets/${dataset.id}/eda`)
+                    const response = await fetch(`http://213.210.37.171:5001/api/data/datasets/${dataset.id}/eda`)
                     console.log('📡 EDA test response:', {
                       status: response.status,
                       ok: response.ok,
