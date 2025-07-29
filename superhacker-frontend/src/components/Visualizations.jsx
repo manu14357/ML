@@ -20,7 +20,7 @@ import Plot from 'react-plotly.js'
 import { fetchRealChartData, generateRealPlotlyConfig } from '@/utils/realDataUtils'
 import { DatasetOverviewModal } from './DatasetOverviewModal'
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'http://213.210.37.171:5001/api'
 
 // Chart type configurations
 const CHART_TYPES = {
