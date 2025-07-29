@@ -1,6 +1,6 @@
 // Real data fetching utility for chart previews
 export const fetchRealChartData = async (datasetId, chartConfig) => {
-  const API_BASE = 'http://localhost:5000/api'
+  const API_BASE = 'http://213.210.37.171:5001/api'
   
   try {
     // Show more detailed logging in development
