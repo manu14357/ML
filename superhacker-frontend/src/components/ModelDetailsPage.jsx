@@ -59,7 +59,7 @@ import {
   Lock
 } from 'lucide-react'
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'http://213.210.37.171:5001/api'
 
 const STATUS_COLORS = {
   'trained': 'bg-green-500',
