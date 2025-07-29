@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import Plot from 'react-plotly.js'
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'http://213.210.37.171:5001/api'
 
 // Mock system data generator for demo purposes
 const generateSystemMetrics = () => {
