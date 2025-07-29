@@ -139,7 +139,7 @@ export function DataManagement() {
   const fetchDatasets = async () => {
     try {
       setLoading(true)
-      const response = await fetch('http://localhost:5000/api/data/datasets')
+      const response = await fetch('http://213.210.37.171:5001/api/data/datasets')
       if (response.ok) {
         const data = await response.json()
         console.log('Datasets API response:', data)
@@ -229,7 +229,7 @@ export function DataManagement() {
         setUploadProgress(prev => Math.min(prev + 10, 90))
       }, 200)
 
-      const response = await fetch('http://localhost:5000/api/data/upload', {
+      const response = await fetch('http://213.210.37.171:5001/api/data/upload', {
         method: 'POST',
         body: formData
       })
@@ -259,7 +259,7 @@ export function DataManagement() {
     if (!confirm('Are you sure you want to delete this dataset?')) return
 
     try {
-      const response = await fetch(`http://localhost:5000/api/data/datasets/${datasetId}`, {
+      const response = await fetch(`http://213.210.37.171:5001/api/data/datasets/${datasetId}`, {
         method: 'DELETE'
       })
 
@@ -283,7 +283,7 @@ export function DataManagement() {
       setLoadingMorePreview(true)
       setColumnViewIndex(0) // Reset column view index
       
-      const response = await fetch(`http://localhost:5000/api/data/datasets/${dataset.id}/preview?page=${1}&limit=${previewPageSize}`)
+      const response = await fetch(`http://213.210.37.171:5001/api/data/datasets/${dataset.id}/preview?page=${1}&limit=${previewPageSize}`)
       if (response.ok) {
         const data = await response.json()
         
@@ -356,7 +356,7 @@ export function DataManagement() {
       }
       
       const response = await fetch(
-        `http://localhost:5000/api/data/datasets/${datasetId}/preview?page=${previewPage}&limit=${previewPageSize}`
+        `http://213.210.37.171:5001/api/data/datasets/${datasetId}/preview?page=${previewPage}&limit=${previewPageSize}`
       );
       
       if (response.ok) {
@@ -459,7 +459,7 @@ export function DataManagement() {
       setLoadingEDA(true)
       setShowEDAPanel(true) // Show panel immediately to provide feedback
       
-      const response = await fetch(`http://localhost:5000/api/data/datasets/${dataset.id}/eda`)
+      const response = await fetch(`http://213.210.37.171:5001/api/data/datasets/${dataset.id}/eda`)
       const data = await response.json()
       
       console.log('EDA API response:', { status: response.status, data }) // Debug log
