@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { Target, Brain, Zap, Loader2, CheckCircle, XCircle } from 'lucide-react'
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'http://213.210.37.171:5001/api'
 
 export function PredictionDialog({ model, isOpen, onClose }) {
   const [predictionData, setPredictionData] = useState({})
