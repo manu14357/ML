@@ -49,7 +49,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { toast } from 'sonner'
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'http://213.210.37.171:5001/api'
 
 // Icon mapping for different node types
 const NODE_ICONS = {
