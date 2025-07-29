@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/system/health')
+        const response = await fetch('http://213.210.37.171:5001/api/system/health')
         const data = await response.json()
         setSystemHealth(data)
       } catch (error) {
